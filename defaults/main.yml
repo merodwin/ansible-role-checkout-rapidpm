@@ -1,2 +1,20 @@
 ---
 # defaults file for ansible-role-checkout-rapidpm/
+checkout_path: "{{ ansible_env.HOME}}/projects/rapidpm/"
+checkout_version: "develop"
+rapidpm_repos: 
+  - "JavaMicroService/rapidpm-microservice"
+  - "JavaMicroService/rapidpm-microservice-performance"
+  - "JavaMicroService/rapidpm-microservice-examples"
+  - "JavaMicroService/jumpstart-vaadin"
+  - "Dynamic-Dependency-Injection/dynamic-cdi"
+  - "Dynamic-Dependency-Injection/dynamic-cdi-examples"
+  - "Dynamic-Dependency-Injection/dynamic-dependency-injection.github.io"
+  - "ProxyBuilder/proxybuilder"
+  - "ProxyBuilder/proxybuilder-examples"
+  - "ProxyBuilder/ProxyBuilder.github.io"
+  - "RapidPM/rapidpm-dependencies"
+  - "RapidPM/rapidpm-plugin-idea"
+  - "attoservice/poc_atto_servicelocator"
+  - "attoservice/rapidpm-vagrant"
+  - "attoservice/rapidpm-integration-parent"

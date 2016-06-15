@@ -1,2 +1,14 @@
 ---
 # tasks file for ansible-role-checkout-rapidpm/
+
+
+- name: ensure git is installed
+  become: yes
+  apt: name=git update_cache=yes state=present
+- name: clone all rapidpm repos
+  git: repo="http://github.com/{{item}}.git"
+       dest="{{checkout_path}}/{{item}}"
+       version="{{checkout_version}}"
+       accept_hostkey=yes
+  with_items: "{{rapidpm_repos}}"
+
